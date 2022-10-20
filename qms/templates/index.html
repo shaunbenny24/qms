@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>qms home page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+   
+    {% load static%}
+    <link rel="stylesheet" href="{% static 'style.css'%}">
+
+</head>
+<body>
+    <header class="container d-flex justify-content-between mb-5">
+        <div>
+            <h3>QMS</h3>
+        </div>
+        <nav class="navbar navbar-expand-sm bg-light">
+            <div class="container-fluid">
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="{% url 'home'%}">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">about</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="{% url 'privacy'%}">privacy</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">account</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="{% url 'signin'%}">sign in</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="{% url 'signup'%}">sign up</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+        </nav>
+    </header>
+    <section class="container text-center mb-5">
+        <div class="row">
+            <div class="mb-4" class="col-md-4">
+                <h4>Powerful financial platform for your business</h4>
+            </div>
+            <div class="mb-5" class="col-md-4">
+                <p>QMS is a comprehensive cloud financial platform that takes care of your business finance. From core accounting, stock tracking, bank reconciliation, and managing projects, to automating workflows, and keeping your business GST compliant, QMS does it all and more.</p>
+            </div>
+            <div class="d-flex gap-4 flex-column flex-sm-row justify-content-center" id="p" class="col-md-4">
+                <p class="start">Start my 14 Day Free Trial</p>
+                <p class="explore text-center">Explore Demo Account</p>
+            </div>
+        </div>
+    </section>
+    <section class="container text-center mb-5">
+        <div class="shadow p-3 mb-5 bg-body rounded d-none d-lg-block">
+            <img src="../static/imges/image 3.png" alt="" width="971px" height="591px">
+        </div>
+    </section>
+    <section class="container d-flex mb-5" id="div">
+        <div>
+            <img src="../static/imges/bill 1.png" alt="">
+        </div>
+        <div class="ex">
+            <p>The latest announcement from the GST Council requires businesses with a turnover of Rs.10Cr. and above to mandatorily generate e-invoices starting October 2022. Zoho Books ensures you stay compliant with the government's latest e-invoicing notification.</p>
+            <p>Explore e-invoicing</p>
+        </div>
+    </section>
+    <section class="container mb-5">
+        <div class="row">
+            <div class="text-center mb-5" class="col-md-4">
+                <h3>Why QMS is the preferred accounting software of businesses</h3>
+            </div>
+            <div class="section gap-4  flex-column flex-sm-row">
+                <div class="col-md-4 text-md-start text-center">
+                    <img src="../static/imges/image 4.png" alt="">
+                    <h5>End-to-end accounting</h5>
+                    <br>
+                    <p>Right from negotiating deals to raising sales orders and invoicing, QMS handles mundane accounting tasks so you can focus on your business.</p>
+                </div>
+                <div class="col-md-4 text-md-start text-center">
+                    <img src="../static/imges/image 4(1).png" alt="">
+                    <h5>GST compliance</h5>
+                    <br>
+                    <p>Create GST invoices, know your tax liability, and file your tax returns directly. QMS keeps your business GST compliant.</p>
+                </div>
+                <div class="col-md-4 text-md-start text-center">
+                    <img src="../static/imges/image 4(2).png" alt="">
+                    <h5>Integrated platform</h5>
+                    <br>
+                    <p>As your business grows, add more of QMS's 50+ apps to help you manage and run every aspect of your business from wherever you are.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="container">
+        <div class="row">
+            <div class="text-center mb-5">
+                <h3>Out of the box integrations</h3>
+            </div>
+            <div class="d-flex justify-content-center text-center mb-4 flex-column flex-sm-row" id="footer" class="col-md-4">
+                <img src="../static/imges/Ellipse 2.png" alt="">
+                <img src="../static/imges/Ellipse 3.png" alt="">
+                <img src="../static/imges/Ellipse 4.png" alt="">
+                <img src="../static/imges/Ellipse 5.png" alt="">
+            </div>
+            <div class="d-flex text-center justify-content-between flex-column flex-sm-row gap-4" class="col-md-4">
+                <img src="../static/imges/bmw.png" alt="">
+                <img src="../static/imges/loop.png" alt="">
+                <img src="../static/imges/north.png" alt="">
+                <img src="../static/imges/star.png" alt="">
+                <img src="../static/imges/cp.png" alt="">
+            </div>
+        </div>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+</body>
+</html>

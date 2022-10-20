@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sign up</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+    {% load static%}
+    <link rel="stylesheet" href="{% static 'style.css'%}">
+
+</head>
+<body>
+    <header class="container d-flex justify-content-between mb-5">
+        <div>
+            <h3>QMS</h3>
+        </div>
+        <nav class="navbar navbar-expand-sm bg-light">
+            <div class="container-fluid">
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="{% url 'home'%}">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">about</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="{% url 'privacy'%}">privacy</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">account</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link " href="{% url 'signin'%}">sign in</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" href="{% url 'signup'%}">sign up</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+        </nav>
+    </header>
+    <section class="container-fluid gap-5 d-flex" id="section11">
+      <div class="row gap-4">
+          <div class="right col-lg-6" id="divr">
+            <div class="h1div">
+              <h1>Efficient by Design,Effective in Practice</h1>
+              <p>QMS's intuitive document tree structure lets you see all of the document relationships and dependencies from any record.</p>
+            </div>
+            <div>
+              <img src="../static/imges/img00.png" alt="" width="534px" Height="322px">
+            </div>
+          </div>
+          <div class="login-page">
+            <div class="form">
+            
+              <form class="login-form" method="POST">
+                <div class="haotaii">
+                  <div><h1>Create account</h1></div><br>
+         
+                  {% csrf_token %}
+                  <!-- <input placeholder="Company name"></input>
+                  <input placeholder="Email address"></input>
+                  <input placeholder="Mobile number"></input>
+                  <input placeholder="Password"></input>
+                  <input placeholder="Country"></input>
+                  <input placeholder="State"></input>
+                   -->
+        
+                    {{sign.companyname}}
+                    {{sign.email}}
+                    {{sign.mobile}}
+                    {{sign.password}}
+                    {{sign.passwordre}}
+                    {{sign.country}}
+                    {{sign.state}}
+                
+                <!-- <ul class="d-flex" id="gap">
+                  <li class="remember">Remember me</li>
+             
+                </ul> -->
+                <ul>
+                  <li class="remember">I agree to the <a href="#">terms</a> & <a href="#">privacy policy</a></li>
+                </ul>
+                <!-- <p class="message">Not registered? <a href="{%url 'signup' %}">Forget password?</a></p> -->
+                <button>Signup</button>
+              </form>
+            </div>
+          </div>
+            </div>
+          
+      </div>
+  </section>
+
+
+
+     
+  
+
+
+</body>
+</html>
